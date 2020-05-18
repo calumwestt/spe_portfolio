@@ -1,0 +1,60 @@
+%--------------------
+% Packages
+% -------------------
+\documentclass[11pt,a4paper]{article}
+
+
+\usepackage[pdftex]{graphicx} % Required for including pictures
+\usepackage[pdftex,linkcolor=black,pdfborder={0 0 0}]{hyperref} % Format links for pdf
+\usepackage{calc} % To reset the counter in the document after title page
+
+\frenchspacing % No double spacing between sentences
+\linespread{1.2} % Set linespace
+\usepackage[a4paper, lmargin=0.1666\paperwidth, rmargin=0.1666\paperwidth, tmargin=0.1111\paperheight, bmargin=0.1111\paperheight]{geometry} %margins
+
+\usepackage[protrusion=true,expansion=true]{microtype} % Improves typography, load after fontpackage is selected
+
+
+%-----------------------
+% Set pdf information and add title, fill in the fields
+%-----------------------
+\hypersetup{
+pdfsubject = {Software Product Engineering},
+pdftitle = {SCEEM Space - Development Testing},
+pdfauthor = {Jason Park, Sungijn Kang, William Nafack, Calum West}
+}
+
+%-----------------------
+% Begin document
+%-----------------------
+\begin{document}
+
+\begin{titlepage}
+   \vspace*{\stretch{1.0}}
+   \begin{center}
+      \Large\textbf{SCEEM Space - Development Testing}\\
+      \large\textit{Jason Park, Sungijn Kang, William Nafack, Calum West}
+   \end{center}
+   \vspace*{\stretch{2.0}}
+\end{titlepage}
+
+\section{Development Testing}
+We have received data spreadsheets from the client, so first we need to turn these into CSV files. Then, once the layout of our database is decided we can import these CSV files every time we launch the web application. Secondly, we will have to make several functions that allow us to add data and delete data. If we test these functions directly using our database, it is highly likely that the data can be corrupted or changed in ways we don’t want it to be.
+\bigskip
+
+Therefore, we will be using the H2 database system to test the functions that we are making. The reason we are using H2 is due to the visualisation available so we can easily see any changes that are being made.
+\bigskip
+
+The back end will be tested using SpringBoot, whenever we use HTML to check if it is correctly written and designed, we can check it by running our web application and then viewing it directly on localhost:8080.
+\bigskip
+
+We will be using the JUnit framework to test our applications and the connections between the front end and back end systems. We will use this to test our SpringBoot application, checking that we are correctly pulling data from the database containing all the information on the rooms/persons involved in this application. We have decided to use JUnit as it is a commonly used form for testing applications.
+\bigskip
+
+We have to ensure that the components of our system are actually testable themselves. If they are not testable using standardised testing frameworks, we cannot guarantee that these components have been properly implemented. To ensure that all of the components fit this criteria we are making sure that we create them in a systematic way whilst including interfaces to work with different testing facilities.
+\bigskip
+
+It is also sometimes difficult to correctly test the H2 database component of our system. This is because we do not have the complete set of data that would be used in practice. To work around this we have created our own data and made up information that is similar to the real data. This means that we can run tests on our data as if it were the data being used in actual use of the system.
+\bigskip
+
+\end{document}

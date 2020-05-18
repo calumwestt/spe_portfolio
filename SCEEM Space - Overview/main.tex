@@ -1,0 +1,54 @@
+%--------------------
+% Packages
+% -------------------
+\documentclass[11pt,a4paper]{article}
+
+
+\usepackage[pdftex]{graphicx} % Required for including pictures
+\usepackage[pdftex,linkcolor=black,pdfborder={0 0 0}]{hyperref} % Format links for pdf
+\usepackage{calc} % To reset the counter in the document after title page
+
+\frenchspacing % No double spacing between sentences
+\linespread{1.2} % Set linespace
+\usepackage[a4paper, lmargin=0.1666\paperwidth, rmargin=0.1666\paperwidth, tmargin=0.1111\paperheight, bmargin=0.1111\paperheight]{geometry} %margins
+
+\usepackage[protrusion=true,expansion=true]{microtype} % Improves typography, load after fontpackage is selected
+
+
+%-----------------------
+% Set pdf information and add title, fill in the fields
+%-----------------------
+\hypersetup{
+pdfsubject = {Software Product Engineering},
+pdftitle = {SCEEM Space - Overview},
+pdfauthor = {Jason Park, Sungijn Kang, William Nafack, Calum West}
+}
+
+%-----------------------
+% Begin document
+%-----------------------
+\begin{document}
+
+\begin{titlepage}
+   \vspace*{\stretch{1.0}}
+   \begin{center}
+      \Large\textbf{SCEEM Space - Overview}\\
+      \large\textit{Jason Park, Sungijn Kang, William Nafack, Calum West}
+   \end{center}
+   \vspace*{\stretch{2.0}}
+\end{titlepage}
+
+\section{Overview}
+The School of Computer Science, Electrical and Electronic Engineering and Engineering Maths offers undergraduate, postgraduate taught and postgraduate research degrees. The school provides opportunities to make an impact through creating technology that changes our world. Their strengths in connectivity, computation, AI, cybersecurity, interaction, vision, robotics, energy management, and simulation equip their graduates to create solutions to challenges in health, sustainability, and urban life. The inclusive community is a space for co-creation of education and research. Staff and PhD students are allocated offices or desks for the duration of their employment or studies across four main buildings based on their research interests.
+\bigskip
+
+With a number of recent office moves and ongoing renovations, and very limited space it is necessary to know which offices and desks are vacant so that new students and staff can be allocated to appropriate available space. This is currently managed via a space spreadsheet, but this lacks information, for example regarding which research group students or staff are members of, and which spaces are suitable for (or limited to) which research group or department. The space spreadsheet is also difficult to navigate and sometimes very hard to get your head around. This results in members of staff wasting time when updating the spreadsheet and sometimes making mistakes.
+\bigskip
+
+We aim to create a web application in which staff or student details could be easily entered and which would alert office staff when desk space is about to become available for reallocation. The finish times would need to be manually confirmed as contracts are often extended. We also aim to produce an easy way to visualise how many offices and desks are allocated to different research groups whilst also being able to easily identify empty desks. There will need to be a way to add or remove desks and offices as the school moves into different buildings. We also want to provide a way in which a student can easily be found in case they need to be reached. We want to make a waiting list space for people who are waiting for an office or desk, as sometimes these people may already have a space, but may be better suited to another type of office/desk. There will most likely be sensitive information recorded so access will be restricted to a selected  few members of staff.
+\bigskip
+
+Hopefully the product we create can be used for the foreseeable future by the school, making the task of keeping the information up to date much easier and allowing staff to spend more time on other pieces of work.
+\bigskip
+
+\end{document}
